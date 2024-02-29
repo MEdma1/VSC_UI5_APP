@@ -1,0 +1,11 @@
+specVersion: "3.0"
+metadata:
+  name: sap-ui-comp-sample-smarttable-fullscreen
+type: application
+framework:
+  name: SAPUI5
+  version: "1.120.6"
+  libraries:
+    - name: themelib_sap_horizon
+    - name: sap.m
+    - name: sap.ui.comp
