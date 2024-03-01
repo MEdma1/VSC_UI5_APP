@@ -11,7 +11,7 @@
 
 						<Input class="sapUiSmallMargin" width="50%">  </Input>
 
-						<NumericContent scale="M" value="1.75" valueColor="Good" indicator="Up" press="press" />
+						<NumericContent scale="M" value="1.75" valueColor="Good" indicator="Up" />
 
 						<Text class="sapUiSmallMargin" text="DMA Solutions GmbH &#10; Unternehmensberater in Düsseldorf, Nordrhein-Westfalen" />
 				
