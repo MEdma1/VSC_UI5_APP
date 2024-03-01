@@ -6,7 +6,7 @@ sap.ui.define([
 	'use strict';
 	return Controller.extend("app.First",{
 		handlePress : function(){
-			MessageToast.show("Hello World!!");
+			MessageToast.show("VSC-Output done!");
 		}
 	});
 });
