@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="app. First" xmlns="sap.m"> 
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="app.First" xmlns="sap.m"> 
 	<App>
 		<Page>
 			<Button text="Say hello" press="handlePress"/> 
