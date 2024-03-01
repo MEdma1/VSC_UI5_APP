@@ -9,11 +9,11 @@
 
 				<l:VerticalLayout class="sapUiContentPadding">
 
-						<Input class="sapUiSmallMargin">  </Input>
+						<Input class="sapUiSmallMargin" width="50%">  </Input>
 
 						<NumericContent scale="M" value="1.75" valueColor="Good" indicator="Up" press="press" />
 
-						<Text class="sapUiSmallMargin" text="DMA Solutions GmbH \n Unternehmensberater in Düsseldorf, Nordrhein-Westfalen" />
+						<Text class="sapUiSmallMargin" text="DMA Solutions GmbH &#10; Unternehmensberater in Düsseldorf, Nordrhein-Westfalen" />
 				
 						<Button class="sapUiSmallMargin" text="Output" press="handlePress"/> 
 
