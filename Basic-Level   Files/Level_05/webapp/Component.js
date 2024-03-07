@@ -5,10 +5,16 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "variantDemo/variantmanagmentapp/model/models"
+        "variantDemo/variantmanagmentapp/model/models",
+        "sap/ui/core/mvc/XMLView"
+
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models, XMLView) {
         "use strict";
+
+        XMLView.create({viewName: "app.First"}).then(function(oView){ 
+            oView.placeAt("content");
+        });
 
         return UIComponent.extend("variantDemo.variantmanagmentapp.Component", {
             metadata: {
@@ -33,3 +39,4 @@ sap.ui.define([
         });
     }
 );
+
