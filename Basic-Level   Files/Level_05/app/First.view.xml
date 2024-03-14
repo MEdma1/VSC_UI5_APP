@@ -10,7 +10,7 @@
 
 				<l:VerticalLayout class="sapUiContentPadding">
 
-					<Text text="{name}" />
+					<Text text= "{/jsonFile.oData.firstName}"  />
 
 				</l:VerticalLayout>
 
