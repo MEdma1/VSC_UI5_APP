@@ -6,11 +6,12 @@
 	> 
 
 		<App>
-			<Page title="DMA">
+			<Page title="{jsonFile>/lastName}">
 
 				<l:VerticalLayout class="sapUiContentPadding">
 
 					<Text text= "{jsonFile>/firstName}" />
+					<Text text= "{jsonFile>/address[0]/city}" />
 
 				</l:VerticalLayout>
 
