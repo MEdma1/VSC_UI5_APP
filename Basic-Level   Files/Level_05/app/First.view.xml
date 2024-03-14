@@ -6,7 +6,7 @@
 	> 
 
 		<App>
-			<Page title="{variable>app_title}">
+			<Page title="{data>prod>prod_id}">
 
 				<l:VerticalLayout class="sapUiContentPadding">
 
