@@ -1,0 +1,26 @@
+<mvc:View 
+	xmlns:mvc="sap.ui.core.mvc" 
+	controllerName="app.First" 
+	xmlns="sap.m" 	
+	xmlns:l="sap.ui.layout"
+	> 
+
+		<App>
+			<Page title="Hallo DMA">
+
+				<l:VerticalLayout class="sapUiContentPadding">
+
+						<Input class="sapUiSmallMargin" width="50%">  </Input>
+
+						<NumericContent scale="M" value="1.75" valueColor="Good" indicator="Up" />
+
+						<Text class="sapUiSmallMargin" text="DMA Solutions GmbH &#10; Unternehmensberater in Düsseldorf, Nordrhein-Westfalen" />
+				
+						<Button class="sapUiSmallMargin" text="Output" press="handlePress"/> 
+
+				</l:VerticalLayout>
+
+			</Page>
+		</App> 
+
+</mvc:View>
