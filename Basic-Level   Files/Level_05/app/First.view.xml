@@ -1,23 +1,38 @@
 <mvc:View 
+
+	xmlns="sap.m" 
 	xmlns:mvc="sap.ui.core.mvc" 
-	controllerName="app.First" 
-	xmlns="sap.m" 	
-	xmlns:l="sap.ui.layout"
+
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	displayBlock="true"
+
+	controllerName="app.First" 	
+
 	> 
 
-		<App>
-			<Page title="{jsonFile>/lastName}">
+		<App id="app">
+			<Page id="page" title="{jsonFile>/lastName}">
 
-				<l:VerticalLayout class="sapUiContentPadding">
+				<content>
 
-					<Text text= "{jsonFile>/firstName}" />
-					<Text text= "{jsonFile>/address[0]/city}" />
+						<smartFilterBar:SmartFilterBar id="idSmartFilterBar" entitySet="Customers"  >
+							<smartFilterBar:controlConfiguration>
+								<smartFilterBar:ControlConfiguration id="Customer" key="idCustomer" visibleInAdvancedArea="true" label="Customer ID" />
+								<smartFilterBar:ControlConfiguration id="Company" key="idCompany" visibleInAdvancedArea="true" label="Customer ID" />
+								<smartFilterBar:ControlConfiguration id="City" key="idCity" visibleInAdvancedArea="true" label="Customer ID" />						
+							</smartFilterBar:controlConfiguration>	
+						</smartFilterBar:SmartFilterBar>
 
-				</l:VerticalLayout>
+
+						<smartTable:SmartTable id="idSmartTable" entitySet="Customer" smartFilterId="idSmartFilterBar" tableType="Table" enableAutoBinding="true" >
+							<Table id="idResponsiveTable" selectionChange="handleSelectionChange" mode="SingleSelectMaster"   />
+						</smartTable:SmartTable>
+
+				</content>
 
 			</Page>
 		</App> 
-
 </mvc:View>
 
 
