@@ -1,0 +1,88 @@
+<mvc:View 
+
+
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+
+	xmlns:z="sap.ui.webc.main" 
+	xmlns:fiori="sap.ui.webc.fiori" 
+
+	controllerName="app.First" 	
+
+	> 
+
+		<App id="app">
+			<Page id="page" title="Table">
+
+				<content>
+
+
+
+
+
+						<Table
+							id="idProductsTable"
+							mode="SingleSelect"
+							selectionChange="handleSelectionChange"
+							>
+							<columns>
+								<z:TableColumn>
+									<Label text="prod_id" />
+								</z:TableColumn>
+								<z:TableColumn>
+									<Label text="prod_name" />
+								</z:TableColumn>
+								<z:TableColumn>
+									<Label text="prod_cat" />
+								</z:TableColumn>
+								<z:TableColumn>
+									<Label text="prod_price" />
+								</z:TableColumn>
+								<z:TableColumn>
+									<Label text="prod_curr" />
+								</z:TableColumn>
+							</columns>
+							<z:rows>
+								<z:TableRow type="Active">
+									<z:cells>
+										<z:TableCell>
+											<z:content>
+												<Label text="{prod_id}" />
+											</z:content>
+										</z:TableCell>
+										<z:TableCell>
+											<z:content>
+												<Label text="{prod_name}" />
+											</z:content>
+										</z:TableCell>
+										<z:TableCell>
+											<z:content>
+												<Label text="{prod_cat}" />
+											</z:content>
+										</z:TableCell>
+										<z:TableCell>
+											<z:content>
+												<Label text="{prod_price}" />
+											</z:content>
+										</z:TableCell>
+										<z:TableCell>
+											<z:content>
+												<Label text="{prod_curr}" />
+											</z:content>
+										</z:TableCell>
+									</z:cells>
+								</z:TableRow>
+							</z:rows>
+						</Table>
+
+
+
+
+				</content>
+
+			</Page>
+		</App> 
+</mvc:View>
+
+
+
