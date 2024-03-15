@@ -16,7 +16,8 @@
 
 				<content>
 
-						<smartFilterBar:SmartFilterBar id="idSmartFilterBar" entitySet="Customers"  >
+
+						<smartFilterBar:SmartFilterBar id="idSmartFilterBar" entitySet="../prod"  >
 							<smartFilterBar:controlConfiguration>
 								<smartFilterBar:ControlConfiguration id="Customer" key="idCustomer" visibleInAdvancedArea="true" label="Customer ID" />
 								<smartFilterBar:ControlConfiguration id="Company" key="idCompany" visibleInAdvancedArea="true" label="Customer ID" />
@@ -26,8 +27,9 @@
 
 
 						<smartTable:SmartTable id="idSmartTable" entitySet="Customer" smartFilterId="idSmartFilterBar" tableType="Table" enableAutoBinding="true" >
-							<Table id="idResponsiveTable" selectionChange="handleSelectionChange" mode="SingleSelectMaster"   />
+							<Table id="idResponsiveTable" selectionChange="handleSelectionChange" mode="SingleSelectMaster" />
 						</smartTable:SmartTable>
+
 
 				</content>
 

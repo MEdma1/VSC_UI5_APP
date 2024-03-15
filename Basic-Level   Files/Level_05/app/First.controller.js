@@ -12,7 +12,7 @@ sap.ui.define([
 		onInit: function () {
 
 			// get the path to the JSON file
-			var sPath = jQuery.sap.getModulePath("../Level_05/app", "data2.json"); 
+			var sPath = jQuery.sap.getModulePath("../Level_05/app", "data.json"); 
 			var oJsonData = {
 				firstName: "John",
 				lastName: "Doe",
@@ -23,7 +23,7 @@ sap.ui.define([
 			console.log(sPath);
 			console.log(oJsonData);
 			// initialize the model with the JSON file
-			var oModel = new JSONModel(oJsonData);
+			var oModel = new JSONModel(sPath);
 			console.log(oModel);
 			console.log(oModel.oData.firstName);			
 			// set the model to the view
