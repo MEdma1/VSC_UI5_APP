@@ -13,14 +13,13 @@ sap.ui.define([
 
 			// get the path to the JSON file
 			var sPath = jQuery.sap.getModulePath("../Level_05_Table/app", "data.json"); 
+			console.log(sPath);
 			// initialize the model with the JSON file
 			var oModel = new JSONModel(sPath);
 			console.log(oModel);
-			console.log(oModel.oData);			
 			// set the model to the view
-			this.getView().setModel(oModel);
-			// object of table view
-			this.getView().byId("idProductsTable").bindRows("/");
+			this.getView().setModel(oModel, "model");
+
 
 		},
 

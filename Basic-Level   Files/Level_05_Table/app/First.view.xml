@@ -1,11 +1,8 @@
 <mvc:View 
 
-
 	xmlns="sap.m" 
 	xmlns:mvc="sap.ui.core.mvc" 
-
-	xmlns:z="sap.ui.webc.main" 
-	xmlns:fiori="sap.ui.webc.fiori" 
+	displayBlock="true"
 
 	controllerName="app.First" 	
 
@@ -13,7 +10,6 @@
 
 		<App id="app">
 			<Page id="page" title="Table">
-
 				<content>
 
 
@@ -22,64 +18,42 @@
 
 						<Table
 							id="idProductsTable"
-							mode="SingleSelect"
-							selectionChange="handleSelectionChange"
+							items = "{model>/prod}"
 							>
 							<columns>
-								<z:TableColumn>
-									<Label text="prod_id" />
-								</z:TableColumn>
-								<z:TableColumn>
-									<Label text="prod_name" />
-								</z:TableColumn>
-								<z:TableColumn>
-									<Label text="prod_cat" />
-								</z:TableColumn>
-								<z:TableColumn>
-									<Label text="prod_price" />
-								</z:TableColumn>
-								<z:TableColumn>
-									<Label text="prod_curr" />
-								</z:TableColumn>
+								<z:Column>
+									<Text text="prod_id" />
+								</z:Column>
+								<z:Column>
+									<Text text="prod_name" />
+								</z:Column>
+								<z:Column>
+									<Text text="prod_cat" />
+								</z:Column>
+								<z:Column>
+									<Text text="prod_price" />
+								</z:Column>
+								<z:Column>
+									<Text text="prod_curr" />
+								</z:Column>
 							</columns>
-							<z:rows>
-								<z:TableRow type="Active">
-									<z:cells>
-										<z:TableCell>
-											<z:content>
-												<Label text="{prod_id}" />
-											</z:content>
-										</z:TableCell>
-										<z:TableCell>
-											<z:content>
-												<Label text="{prod_name}" />
-											</z:content>
-										</z:TableCell>
-										<z:TableCell>
-											<z:content>
-												<Label text="{prod_cat}" />
-											</z:content>
-										</z:TableCell>
-										<z:TableCell>
-											<z:content>
-												<Label text="{prod_price}" />
-											</z:content>
-										</z:TableCell>
-										<z:TableCell>
-											<z:content>
-												<Label text="{prod_curr}" />
-											</z:content>
-										</z:TableCell>
-									</z:cells>
-								</z:TableRow>
-							</z:rows>
+							<items>
+								<ColumnListItem >
+									<cells>
+										<Text text="{model>prod_id}" />
+										<Text text="{model>prod_name}" />
+										<Text text="{model>prod_cat}" />
+										<Text text="{model>prod_price}" />
+										<Text text="{model>prod_curr}" />
+									</cells>
+								</ColumnListItem>
+							</items>
 						</Table>
 
 
 
 
 				</content>
-
 			</Page>
 		</App> 
 </mvc:View>
