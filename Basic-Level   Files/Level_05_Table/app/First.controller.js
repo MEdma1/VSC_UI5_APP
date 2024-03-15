@@ -11,14 +11,37 @@ sap.ui.define([
 
 		onInit: function () {
 
-			// get the path to the JSON file
-			var sPath = jQuery.sap.getModulePath("../Level_05_Table/app", "data.json"); 
-			console.log(sPath);
-			// initialize the model with the JSON file
-			var oModel = new JSONModel(sPath);
-			console.log(oModel);
-			// set the model to the view
-			this.getView().setModel(oModel, "model");
+			
+		    var oData = {
+				"names" : [ {
+					   id : 1,
+						Name : "Dinosaurus",
+						Place : "Mountain"
+						}, {
+						
+					   id : 2,
+						Name : "Elephant",
+						Place : "Forest"
+						}, {
+						id : 3,
+						Name : "Whale",
+						Place : "Sea"
+						}, {
+						id : 4,
+						Name : "Duck",
+						Place : "Water"
+						}, {
+						id : 5,
+						Name : "Monkey",
+						Place : "Tree"
+						} ]
+			   };
+						 
+   			   //var sPath = jQuery.sap.getModulePath("../Basic-Level   Files/app", "data_Tbl.json"); 
+
+			   
+			   var oModel = new JSONModel(oData);
+			   this.getView().setModel(oModel, "model");
 
 
 		},

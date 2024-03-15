@@ -1,62 +1,40 @@
 <mvc:View 
-
-	xmlns="sap.m" 
-	xmlns:mvc="sap.ui.core.mvc" 
-	displayBlock="true"
-
 	controllerName="app.First" 	
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+    
+			<App id="app">
+				<Page id="page" title="Table">
+					<content>	 
 
-	> 
+							<Table id="exportTable"
+								items="{model>/names}" >
+								<columns>
+									<Column>
+										<Text text="id" />
+									</Column>
+									<Column>
+										<Text text="Name" />
+									</Column>
+									<Column>
+										<Text text="Place" />
+									</Column>
+								</columns>
+							
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{model>id}" />
+											<Text text="{model>Name}" />
+											<Text text="{model>Place}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
 
-		<App id="app">
-			<Page id="page" title="Table">
-				<content>
-
-
-
-
-
-						<Table
-							id="idProductsTable"
-							items = "{model>/prod}"
-							>
-							<columns>
-								<z:Column>
-									<Text text="prod_id" />
-								</z:Column>
-								<z:Column>
-									<Text text="prod_name" />
-								</z:Column>
-								<z:Column>
-									<Text text="prod_cat" />
-								</z:Column>
-								<z:Column>
-									<Text text="prod_price" />
-								</z:Column>
-								<z:Column>
-									<Text text="prod_curr" />
-								</z:Column>
-							</columns>
-							<items>
-								<ColumnListItem >
-									<cells>
-										<Text text="{model>prod_id}" />
-										<Text text="{model>prod_name}" />
-										<Text text="{model>prod_cat}" />
-										<Text text="{model>prod_price}" />
-										<Text text="{model>prod_curr}" />
-									</cells>
-								</ColumnListItem>
-							</items>
-						</Table>
-
-
-
-
-				</content>
-			</Page>
-		</App> 
+					</content>		
+				</Page>
+			</App>
 </mvc:View>
-
-
-
