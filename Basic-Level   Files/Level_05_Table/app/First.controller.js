@@ -14,27 +14,27 @@ sap.ui.define([
 			
 		    var oData = {
 				"names" : [ {
-					   id : 1,
-						Name : "Dinosaurus",
-						Place : "Mountain"
-						}, {
-						
-					   id : 2,
-						Name : "Elephant",
-						Place : "Forest"
-						}, {
-						id : 3,
-						Name : "Whale",
-						Place : "Sea"
-						}, {
-						id : 4,
-						Name : "Duck",
-						Place : "Water"
-						}, {
-						id : 5,
-						Name : "Monkey",
-						Place : "Tree"
-						} ]
+					id : 1,
+					 Name : "Henrik",
+					 Place : "Mountain"
+					 }, {
+					 
+					id : 2,
+					 Name : "Stefan",
+					 Place : "Forest"
+					 }, {
+					 id : 3,
+					 Name : "Uwe",
+					 Place : "Sea"
+					 }, {
+					 id : 4,
+					 Name : "Helmut",
+					 Place : "Water"
+					 }, {
+					 id : 5,
+					 Name : "Jacob",
+					 Place : "Tree"
+					 } ]
 			   };
 						 
    			   //var sPath = jQuery.sap.getModulePath("../Basic-Level   Files/app", "data_Tbl.json"); 

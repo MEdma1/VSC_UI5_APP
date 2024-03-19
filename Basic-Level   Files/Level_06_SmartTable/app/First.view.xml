@@ -3,36 +3,37 @@
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
-	height="100%">
+	height="100%"
+    
+	displayBlock="true"
+	xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
+	xmlns:smarttable="sap.ui.comp.smarttable"	
+
+	>
     
 			<App id="app">
 				<Page id="page" title="Table">
 					<content>	 
 
-							<Table id="exportTable"
-								items="{model>/names}" >
-								<columns>
-									<Column>
-										<Text text="id" />
-									</Column>
-									<Column>
-										<Text text="Name" />
-									</Column>
-									<Column>
-										<Text text="Place" />
-									</Column>
-								</columns>
-							
-								<items>
-									<ColumnListItem>
-										<cells>
-											<Text text="{model>id}" />
-											<Text text="{model>Name}" />
-											<Text text="{model>Place}" />
-										</cells>
-									</ColumnListItem>
-								</items>
-							</Table>
+
+						<smartfilterbar:SmartFilterBar id="idSmartFilterBar" entitySet="Customers">
+							<smartfilterbar:controlConfiguration>
+
+							</smartfilterbar:controlConfiguration>
+						</smartfilterbar:SmartFilterBar>
+						
+
+
+						<smarttable:SmartTable id="idSmartTable" 
+							smartFilterId="idSmartFilterBar" 
+							entitySet="Customers" 
+							enableAutoBinding="true" 
+							tableType="ResponsiveTable" 
+							initiallyVisibleFields="CustomerID,CompanyName,ContactName"
+						> 
+						</smarttable:SmartTable>
+
+
 
 					</content>		
 				</Page>

@@ -12,35 +12,12 @@ sap.ui.define([
 		onInit: function () {
 
 			
-		    var oData = {
-				"names" : [ {
-					   id : 1,
-						Name : "Dinosaurus",
-						Place : "Mountain"
-						}, {
-						
-					   id : 2,
-						Name : "Elephant",
-						Place : "Forest"
-						}, {
-						id : 3,
-						Name : "Whale",
-						Place : "Sea"
-						}, {
-						id : 4,
-						Name : "Duck",
-						Place : "Water"
-						}, {
-						id : 5,
-						Name : "Monkey",
-						Place : "Tree"
-						} ]
-			   };
-						 
-   			   //var sPath = jQuery.sap.getModulePath("../Basic-Level   Files/app", "data_Tbl.json"); 
+				var sURL = "https://services.odata.org/Northwind/Northwind.svc/$metadata";		
+				var oModel = new sap.ui.model.odata.v2.ODataModel(sURL, {
+					json: true
+				});	
 
 			   
-			   var oModel = new JSONModel(oData);
 			   this.getView().setModel(oModel, "model");
 
 
