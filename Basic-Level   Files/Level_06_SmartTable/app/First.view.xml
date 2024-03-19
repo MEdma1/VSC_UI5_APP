@@ -21,7 +21,6 @@
 
 							</smartfilterbar:controlConfiguration>
 						</smartfilterbar:SmartFilterBar>
-						
 
 
 						<smarttable:SmartTable id="idSmartTable" 
