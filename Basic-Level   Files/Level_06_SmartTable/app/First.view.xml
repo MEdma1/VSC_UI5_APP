@@ -18,13 +18,40 @@
 
 
 
-						<smarttable:SmartTable id="idSmartTable" 
-							entitySet="Customers" 
-							enableAutoBinding="true" 
-							tableType="ResponsiveTable" 
-							initiallyVisibleFields="CustomerID,CompanyName,ContactName"
-						> 
-						</smarttable:SmartTable>
+
+
+
+						<Table items="{/value}">
+							<headerToolbar>
+								<OverflowToolbar>
+									<Title id="title" text="TripPinServiceRW"/>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns>
+								<Column>
+									<Label text="ProductID" design="Bold"/>
+								</Column>
+								<Column>
+									<Label text="ProductName" design="Bold"/>
+								</Column>
+								<Column>
+									<Label text="UnitPrice" design="Bold"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+								<Text text="{ProductID}" />
+								<Text text="{ProductName}" />
+								<Text text="{UnitPrice}" />
+							</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+
+
+
+
 
 
 
