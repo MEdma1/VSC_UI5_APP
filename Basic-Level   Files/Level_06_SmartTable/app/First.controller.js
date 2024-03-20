@@ -12,7 +12,8 @@ sap.ui.define([
 		onInit: function () {
 
 			
-				var sURL = "https://services.odata.org/Northwind/Northwind.svc/$metadata";		
+				var sURL = "https://services.odata.org/Northwind/Northwind.svc/$metadata";
+				// var oModel = new JSONModel(oData);		
 				var oModel = new sap.ui.model.odata.v2.ODataModel(sURL, {
 					json: true
 				});	
@@ -20,9 +21,9 @@ sap.ui.define([
 			   
 			   this.getView().setModel(oModel, "model");
 
+			   debugger;
 
 		},
-
 
 
 		

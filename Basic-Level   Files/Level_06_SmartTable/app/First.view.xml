@@ -16,15 +16,9 @@
 					<content>	 
 
 
-						<smartfilterbar:SmartFilterBar id="idSmartFilterBar" entitySet="Customers">
-							<smartfilterbar:controlConfiguration>
-
-							</smartfilterbar:controlConfiguration>
-						</smartfilterbar:SmartFilterBar>
 
 
 						<smarttable:SmartTable id="idSmartTable" 
-							smartFilterId="idSmartFilterBar" 
 							entitySet="Customers" 
 							enableAutoBinding="true" 
 							tableType="ResponsiveTable" 
