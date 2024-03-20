@@ -12,44 +12,55 @@
 	>
     
 			<App id="app">
-				<Page id="page" title="Table">
+				<Page id="page" title="CW Vorlage">
 					<content>	 
 
 
 
+<smarttable:SmartTable 
+		id="idSmartTable" 
+		entitySet="" 
+		enableAutoBinding="true" 
+		tableType="ResponsiveTable" 
+		useVariantManagement="true"
+		useExportToExcel="true"
+		persistencyKey="SmartTableAnalytical_Explored"
+		useTablePersonalisation="true"
+		class="sapUiResponsiveContentPadding"
+		header="Line Items"
+> 
 
 
 
+									<Table items="{/value}">
+										<headerToolbar>
+											<OverflowToolbar>
+												<Title id="title" text="OData"/>
+											</OverflowToolbar>
+										</headerToolbar>
+										<columns>
+											<Column>
+												<Label text="ProductID" design="Bold"/>
+											</Column>
+											<Column>
+												<Label text="ProductName" design="Bold"/>
+											</Column>
+											<Column>
+												<Label text="UnitPrice" design="Bold"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem>
+												<cells>
+											<Text text="{ProductID}" />
+											<Text text="{ProductName}" />
+											<Text text="{UnitPrice}" />
+										</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
 
-						<Table items="{/value}">
-							<headerToolbar>
-								<OverflowToolbar>
-									<Title id="title" text="TripPinServiceRW"/>
-								</OverflowToolbar>
-							</headerToolbar>
-							<columns>
-								<Column>
-									<Label text="ProductID" design="Bold"/>
-								</Column>
-								<Column>
-									<Label text="ProductName" design="Bold"/>
-								</Column>
-								<Column>
-									<Label text="UnitPrice" design="Bold"/>
-								</Column>
-							</columns>
-							<items>
-								<ColumnListItem>
-									<cells>
-								<Text text="{ProductID}" />
-								<Text text="{ProductName}" />
-								<Text text="{UnitPrice}" />
-							</cells>
-								</ColumnListItem>
-							</items>
-						</Table>
-
-
+</smarttable:SmartTable>
 
 
 
