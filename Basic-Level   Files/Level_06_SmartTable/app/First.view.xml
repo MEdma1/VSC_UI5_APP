@@ -19,20 +19,15 @@
 
 <smarttable:SmartTable 
 		id="idSmartTable" 
-		entitySet="" 
+		entitySet="{/value}" 
 		enableAutoBinding="true" 
 		tableType="ResponsiveTable" 
 		useVariantManagement="true"
-		useExportToExcel="true"
 		persistencyKey="SmartTableAnalytical_Explored"
-		useTablePersonalisation="true"
-		class="sapUiResponsiveContentPadding"
-		header="Line Items"
-> 
+		useTablePersonalisation="true" > 
 
 
-
-									<Table items="{/value}">
+									<Table items="{/value}" class="sapUiResponsiveContentPadding" >
 										<headerToolbar>
 											<OverflowToolbar>
 												<Title id="title" text="OData"/>
