@@ -43,6 +43,13 @@
 
 
 
+<smarttable:SmartTable 
+		id="idSmartTable" 
+		entitySet="" 
+		smartFilterId=""
+>
+
+
 
 								<Table items="{/value}" class="sapUiResponsiveContentPadding" >
 									<headerToolbar>
@@ -71,8 +78,6 @@
 										<ColumnListItem >
 											<cells>
 												<ObjectIdentifier title="{ProductName}" text="{ProductID}" />
-												<!-- <Text text="{ProductID}" 	/>
-												<Text text="{ProductName}" 	/> -->
 												<Text text="{SupplierID}" 	/>
 												<Text text="{CategoryID}" 	/>
 												<Text text="{UnitsInStock}" />
@@ -90,7 +95,7 @@
 								</Table>
 
 
-
+</smarttable:SmartTable>
 
 
 
