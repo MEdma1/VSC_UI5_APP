@@ -13,7 +13,26 @@
     
 			<App id="app">
 				<Page id="page" title="CW Vorlage">
+
+
+
+		<customHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="Functions" level="H2"/>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://edit" type="Transparent" press="onPress" ariaLabelledBy="editButtonLabel"/>
+			</Toolbar>
+		</customHeader>
+
+
 					<content>	 
+
+
+
+
+
+
 
 
 
@@ -62,6 +81,17 @@
 
 
 					</content>		
+
+
+
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button type="Emphasized" text="Data Upload" press="onPress" />
+			</Toolbar>
+		</footer>
+
+
 				</Page>
 			</App>
 </mvc:View>
