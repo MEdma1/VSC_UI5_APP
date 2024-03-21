@@ -38,6 +38,12 @@
 					<content>	 
 
 
+
+
+
+
+
+
 								<Table items="{/value}" class="sapUiResponsiveContentPadding" >
 									<headerToolbar>
 										<OverflowToolbar>
@@ -46,25 +52,48 @@
 									</headerToolbar>
 									<columns>
 										<Column>
-											<Label text="ProductID" design="Bold"/>
+											<Label text="Product" design="Bold"/>
 										</Column>
 										<Column>
-											<Label text="ProductName" design="Bold"/>
+											<Label text="SupplierID" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="CategoryID" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="UnitsInStock" design="Bold"/>
 										</Column>
 										<Column>
 											<Label text="UnitPrice" design="Bold"/>
 										</Column>
 									</columns>
 									<items>
-										<ColumnListItem>
+										<ColumnListItem >
 											<cells>
-										<Text text="{ProductID}" />
-										<Text text="{ProductName}" />
-										<Text text="{UnitPrice}" />
-									</cells>
+												<ObjectIdentifier title="{ProductName}" text="{ProductID}" />
+												<!-- <Text text="{ProductID}" 	/>
+												<Text text="{ProductName}" 	/> -->
+												<Text text="{SupplierID}" 	/>
+												<Text text="{CategoryID}" 	/>
+												<Text text="{UnitsInStock}" />
+												<ObjectNumber
+													number="{
+														parts:[{path:'UnitPrice'},{path:'CurrencyCode'}],
+														type: 'sap.ui.model.type.Currency',
+														formatOptions: {showMeasure: false}
+													}"
+													unit="EUR" 
+												/>
+											</cells>
 										</ColumnListItem>
 									</items>
 								</Table>
+
+
+
+
+
+
 
 
 					</content>		

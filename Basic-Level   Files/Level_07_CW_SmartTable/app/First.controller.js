@@ -6,8 +6,13 @@ sap.ui.define([
 	], function (Controller, JSONModel, MessageToast) { 
 	'use strict';
 
+
+            var oModel = new JSONModel(); 
+
+
 	return Controller.extend("app.First",{
 
+        
 
 		onInit: function () {
 
@@ -27,14 +32,16 @@ sap.ui.define([
             fetch(url)
             .then((res)=>res.json())
             .then((param)=>{
-                console.log(new JSONModel(param));
                 this.getView().setModel(new JSONModel(param));
+
+                oModel(param);
+                console.log(oModel);
             });
         },
 
 
         onEdit: function() {
-			// this.aProductCollection = deepExtend([], this.oModel.getProperty("/ProductCollection"));
+			// this.aProductCollection = deepExtend([], this.oModel.getProperty("/value"));
 			this.byId("editButton").setVisible(false);
 			this.byId("saveButton").setVisible(true);
 			this.byId("cancelButton").setVisible(true);
@@ -56,14 +63,14 @@ sap.ui.define([
 			// this.rebindTable(this.oReadOnlyTemplate, "Navigation");
 		},
 
-		rebindTable: function(oTemplate, sKeyboardMode) {
-			// this.oTable.bindItems({
-			// 	path: "/ProductCollection",
-			// 	template: oTemplate,
-			// 	templateShareable: true,
-			// 	key: "ProductId"
-			// });
-		},
+		// rebindTable: function(oTemplate, sKeyboardMode) {
+		// 	// this.oTable.bindItems({
+		// 	// 	path: "/ProductCollection",
+		// 	// 	template: oTemplate,
+		// 	// 	templateShareable: true,
+		// 	// 	key: "ProductID"
+		// 	// });
+		// },
 
 	});
 
