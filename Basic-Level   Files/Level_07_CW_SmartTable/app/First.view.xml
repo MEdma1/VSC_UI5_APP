@@ -12,84 +12,72 @@
 	>
     
 			<App id="app">
-				<Page id="page" title="CW Vorlage">
+				<Page id="page">
 
 
+					<customHeader>
 
-		<customHeader>
-			<Toolbar>
-				<ToolbarSpacer/>
-				<Title text="Functions" level="H2"/>
-				<ToolbarSpacer/>
-				<Button icon="sap-icon://edit" type="Transparent" press="onPress" ariaLabelledBy="editButtonLabel"/>
-			</Toolbar>
-		</customHeader>
+								<Toolbar>
+									<ToolbarSpacer/>
+									<Title text="SAC CW | Planning license" level="H2"/>
+									<ToolbarSpacer/>
+
+									<Button id="editButton" text="Edit" type="Transparent"
+										press="onEdit" />
+									<Button id="saveButton" text="Save" type="Transparent"
+										press="onSave" visible="false" />
+									<Button id="cancelButton" text="Cancel" type="Transparent"
+										press="onCancel" visible="false" />
+
+
+								</Toolbar>
+
+					</customHeader>
 
 
 					<content>	 
 
 
-
-
-
-
-
-
-
-<smarttable:SmartTable 
-		id="idSmartTable" 
-		entitySet="{/value}" 
-		enableAutoBinding="true" 
-		tableType="ResponsiveTable" 
-		useVariantManagement="true"
-		persistencyKey="SmartTableAnalytical_Explored"
-		useTablePersonalisation="true" > 
-
-
-									<Table items="{/value}" class="sapUiResponsiveContentPadding" >
-										<headerToolbar>
-											<OverflowToolbar>
-												<Title id="title" text="OData"/>
-											</OverflowToolbar>
-										</headerToolbar>
-										<columns>
-											<Column>
-												<Label text="ProductID" design="Bold"/>
-											</Column>
-											<Column>
-												<Label text="ProductName" design="Bold"/>
-											</Column>
-											<Column>
-												<Label text="UnitPrice" design="Bold"/>
-											</Column>
-										</columns>
-										<items>
-											<ColumnListItem>
-												<cells>
-											<Text text="{ProductID}" />
-											<Text text="{ProductName}" />
-											<Text text="{UnitPrice}" />
-										</cells>
-											</ColumnListItem>
-										</items>
-									</Table>
-
-</smarttable:SmartTable>
-
-
-
+								<Table items="{/value}" class="sapUiResponsiveContentPadding" >
+									<headerToolbar>
+										<OverflowToolbar>
+											<Title id="title" text="Data Input Area"/>
+										</OverflowToolbar>
+									</headerToolbar>
+									<columns>
+										<Column>
+											<Label text="ProductID" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="ProductName" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="UnitPrice" design="Bold"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+										<Text text="{ProductID}" />
+										<Text text="{ProductName}" />
+										<Text text="{UnitPrice}" />
+									</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
 
 
 					</content>		
 
 
+					<footer>
 
-		<footer>
-			<Toolbar>
-				<ToolbarSpacer/>
-				<Button type="Emphasized" text="Data Upload" press="onPress" />
-			</Toolbar>
-		</footer>
+								<Toolbar>
+									<ToolbarSpacer/>
+									<Button type="Emphasized" text="Data Upload" press="onPress" />
+								</Toolbar>
+
+					</footer>
 
 
 				</Page>
