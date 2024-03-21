@@ -1,0 +1,67 @@
+<mvc:View 
+	controllerName="app.First" 	
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%"
+    
+	displayBlock="true"
+	xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
+	xmlns:smarttable="sap.ui.comp.smarttable"	
+
+	>
+    
+			<App id="app">
+				<Page id="page" title="CW Vorlage">
+					<content>	 
+
+
+
+<smarttable:SmartTable 
+		id="idSmartTable" 
+		entitySet="{/value}" 
+		enableAutoBinding="true" 
+		tableType="ResponsiveTable" 
+		useVariantManagement="true"
+		persistencyKey="SmartTableAnalytical_Explored"
+		useTablePersonalisation="true" > 
+
+
+									<Table items="{/value}" class="sapUiResponsiveContentPadding" >
+										<headerToolbar>
+											<OverflowToolbar>
+												<Title id="title" text="OData"/>
+											</OverflowToolbar>
+										</headerToolbar>
+										<columns>
+											<Column>
+												<Label text="ProductID" design="Bold"/>
+											</Column>
+											<Column>
+												<Label text="ProductName" design="Bold"/>
+											</Column>
+											<Column>
+												<Label text="UnitPrice" design="Bold"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem>
+												<cells>
+											<Text text="{ProductID}" />
+											<Text text="{ProductName}" />
+											<Text text="{UnitPrice}" />
+										</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+
+</smarttable:SmartTable>
+
+
+
+
+
+					</content>		
+				</Page>
+			</App>
+</mvc:View>
