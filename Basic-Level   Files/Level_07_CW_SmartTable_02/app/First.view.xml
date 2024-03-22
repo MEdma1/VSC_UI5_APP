@@ -1,0 +1,119 @@
+<mvc:View 
+	controllerName="app.First" 	
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%"
+    
+	displayBlock="true"
+	xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
+	xmlns:smarttable="sap.ui.comp.smarttable"	
+
+	>
+    
+			<App id="app">
+				<Page id="page">
+
+
+					<customHeader>
+
+								<Toolbar>
+									<ToolbarSpacer/>
+									<Title text="SAC CW | Planning license" level="H2"/>
+									<ToolbarSpacer/>
+
+									<Button id="editButton" text="Edit" type="Transparent"
+										press="onEdit" />
+									<Button id="saveButton" text="Save" type="Transparent"
+										press="onSave" visible="false" />
+									<Button id="cancelButton" text="Cancel" type="Transparent"
+										press="onCancel" visible="false" />
+
+
+								</Toolbar>
+
+					</customHeader>
+
+
+					<content>	 
+
+
+
+
+
+
+
+<smarttable:SmartTable 
+		id="idSmartTable" 
+		entitySet="" 
+		smartFilterId=""
+>
+
+
+
+								<Table items="{/value}" class="sapUiResponsiveContentPadding" >
+									<headerToolbar>
+										<OverflowToolbar>
+											<Title id="title" text="Data Input Area"/>
+										</OverflowToolbar>
+									</headerToolbar>
+									<columns>
+										<Column>
+											<Label text="Product" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="SupplierID" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="CategoryID" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="UnitsInStock" design="Bold"/>
+										</Column>
+										<Column>
+											<Label text="UnitPrice" design="Bold"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem >
+											<cells>
+												<ObjectIdentifier title="{ProductName}" text="{ProductID}" />
+												<Text text="{SupplierID}" 	/>
+												<Text text="{CategoryID}" 	/>
+												<Text text="{UnitsInStock}" />
+												<ObjectNumber
+													number="{
+														parts:[{path:'UnitPrice'},{path:'CurrencyCode'}],
+														type: 'sap.ui.model.type.Currency',
+														formatOptions: {showMeasure: false}
+													}"
+													unit="EUR" 
+												/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+
+
+</smarttable:SmartTable>
+
+
+
+
+
+					</content>		
+
+
+					<footer>
+
+								<Toolbar>
+									<ToolbarSpacer/>
+									<Button type="Emphasized" text="Data Upload" press="onPress" />
+								</Toolbar>
+
+					</footer>
+
+
+				</Page>
+			</App>
+</mvc:View>
