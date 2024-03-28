@@ -2,11 +2,10 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
-	"sap/m/MessageToast"
-	], function (Controller, JSONModel, MessageToast) { 
+	"sap/ui/model/odata/v4/ODataModel"
+	// 'sap/ui/model/odata/v2/ODataModel'
+	], function (Controller, JSONModel, ODataModel) { 
 	'use strict';
-
-        var oModel = new JSONModel(); 
 
 	return Controller.extend("app.First",{
 
@@ -14,13 +13,47 @@ sap.ui.define([
 
 		onInit: function () {
 
+			// var oModel1 = new sap.ui.model.odata.ODataModel("http://services.odata.org/Northwind/Northwind.svc/Products")
+			// var oModel1 = new ODataModel("https://services.odata.org/V3/northwind/Northwind.svc/$metadata/");
+			// var oModel2 = new ODataModel({serviceUrl: "https://services.odata.org/V3/northwind/Northwind.svc/"});
+
+			var array = [{
+                "name" : "Dinesh",
+                "id" : "123"
+            },
+            {
+                "name" : "Nikhil",
+                "id" : "456"
+            },{
+                "name" : "Pulkit",
+                "id" : "789"
+            }];
+
+            var model = new sap.ui.model.json.JSONModel();
+
+            model.setData({
+                tableSet: array
+            });
+
+			console.log(model);
+
+            this.getView().byId("smartTable_ResponsiveTable").setModel(model);
+            
+
+
+
+
 		},
 
 		
         onAfterRendering : function(){
-            // this.onGetRequest('https://services.odata.org/V4/(S(epugafwj5m0rg30yoxbtltlk))/TripPinServiceRW/?$format=json');
 			this.onGetRequest('https://services.odata.org/V3/Northwind/Northwind.svc/Products?$format=json');
         },
+
+
+		
+
+
 
 
 
@@ -29,10 +62,6 @@ sap.ui.define([
             .then((res)=>res.json())
             .then((param)=>{
                 this.getView().setModel(new JSONModel(param));
-
-                oModel(param);
-                console.log(oModel);
-
             });
         },
 

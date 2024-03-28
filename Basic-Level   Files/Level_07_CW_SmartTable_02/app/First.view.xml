@@ -43,7 +43,7 @@
 
 
 
-<smarttable:SmartTable 
+<!-- <smarttable:SmartTable 
 		id="idSmartTable" 
 		entitySet="" 
 		smartFilterId=""
@@ -95,10 +95,23 @@
 								</Table>
 
 
-</smarttable:SmartTable>
+</smarttable:SmartTable> -->
 
 
-
+<smartTable:SmartTable 
+        id="smartTable_ResponsiveTable"
+        smartFilterId="smartFilterBar" 
+        tableType="ResponsiveTable" 
+        editable="false"
+        entitySet="tableSet"
+        useVariantManagement="false"
+        useTablePersonalisation="false" 
+        header="Products" 
+        showRowCount="true"
+        useExportToExcel="false" 
+        enableAutoBinding="true"
+        initiallyVisibleFields="name">
+    </smartTable:SmartTable>
 
 
 					</content>		
