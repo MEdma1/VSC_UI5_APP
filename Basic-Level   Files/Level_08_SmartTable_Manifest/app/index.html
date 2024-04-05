@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <title>UI5 model and bindings</title>
-
-  <script id="sap-ui-boostrap" src="/resources/sap-ui-core.js"
-  data-sap-ui-resourceroots='{"in.sijas.ui5.app":"./"}'
-  data-sap-ui-theme="sap_belize"
-  data-sap-ui-async="true"
-  data-sap-ui-compatVersion = "edge"
-  data-sap-ui-onInit="module:sap/ui/core/ComponentSupport">
-
-  </script>
-</head>
-
-<body class="sapUiBody" id="content">
-  <div data-sap-ui-component data-name="in.sijas.ui5.app" data-id="container" data-settings='{"id" : "app"}'></div>
-</body>
-
+	<head>
+		<title>UI5-Coding</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+		
+		<script id="sap-ui-bootstrap" 
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
+			data-sap-ui-theme="sap_belize" 
+			data-sap-ui-libs="sap.m" 
+			data-sap-ui-resourceroots='{"app": "./"}' 
+			data-sap-ui-onInit="module:app/index" 
+			data-sap-ui-compatVersion="edge" 
+			data-sap-ui-xx-bindingSyntax="complex"   
+			data-sap-ui-async="true">
+		</script>
+	</head>
+	
+	<body class="sapUiBody" id="content"> 
+	</body>
+	
 </html>
+
+
+<!-- Programm kann nur über Live Server oder http bzw. localhost ausgeführt werden | Pfad C:/... nicht möglich! -->
