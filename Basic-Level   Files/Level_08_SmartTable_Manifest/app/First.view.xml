@@ -42,64 +42,6 @@
 
 
 
-
-<smarttable:SmartTable 
-		id="idSmartTable" 
-		entitySet="" 
-		smartFilterId=""
->
-
-
-								<Table items="{/value}" class="sapUiResponsiveContentPadding" >
-									<headerToolbar>
-										<OverflowToolbar>
-											<Title id="title" text="Data Input Area"/>
-										</OverflowToolbar>
-									</headerToolbar>
-									<columns>
-										<Column>
-											<Label text="Airport" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="IcaoCode" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="IataCode" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="Address" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="Geographic coordinate" design="Bold"/>
-										</Column>										
-										<Column>
-											<Label text="UnitPrice" design="Bold"/>
-										</Column>
-									</columns>
-									<items>
-										<ColumnListItem >
-											<cells>
-												<ObjectIdentifier title="{Name}" text="" />
-												<Text text="{IcaoCode}" 	/>
-												<Text text="{IataCode}" 	/>
-												<Text text="{Location/Address}" />
-												<Text text="{Location/Loc/coordinates}" />
-												<ObjectNumber
-													number="750"
-													unit="EUR" 
-												/>
-											</cells>
-										</ColumnListItem>
-									</items>
-								</Table>
-
-
-</smarttable:SmartTable>
-
-
-
-
-
 					</content>		
 
 
