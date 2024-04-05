@@ -18,8 +18,6 @@ sap.ui.define([
 
 		
         onAfterRendering : function(){
-            // this.onGetRequest('https://services.odata.org/V4/(S(epugafwj5m0rg30yoxbtltlk))/TripPinServiceRW/?$format=json');
-			// this.onGetRequest('https://services.odata.org/V3/Northwind/Northwind.svc/Products?$format=json');
 			this.onGetRequest('https://services.odata.org/TripPinRESTierService/(S(zdjpqz5q4hlpngaq3zdkdzzv))/Airports?$format=json');
         },
 

@@ -50,51 +50,6 @@
 >
 
 
-
-								<!-- <Table items="{/value}" class="sapUiResponsiveContentPadding" >
-									<headerToolbar>
-										<OverflowToolbar>
-											<Title id="title" text="Data Input Area"/>
-										</OverflowToolbar>
-									</headerToolbar>
-									<columns>
-										<Column>
-											<Label text="Product" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="SupplierID" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="CategoryID" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="UnitsInStock" design="Bold"/>
-										</Column>
-										<Column>
-											<Label text="UnitPrice" design="Bold"/>
-										</Column>
-									</columns>
-									<items>
-										<ColumnListItem >
-											<cells>
-												<ObjectIdentifier title="{ProductName}" text="{ProductID}" />
-												<Text text="{SupplierID}" 	/>
-												<Text text="{CategoryID}" 	/>
-												<Text text="{UnitsInStock}" />
-												<ObjectNumber
-													number="{
-														parts:[{path:'UnitPrice'},{path:'CurrencyCode'}],
-														type: 'sap.ui.model.type.Currency',
-														formatOptions: {showMeasure: false}
-													}"
-													unit="EUR" 
-												/>
-											</cells>
-										</ColumnListItem>
-									</items>
-								</Table> -->
-
-
 								<Table items="{/value}" class="sapUiResponsiveContentPadding" >
 									<headerToolbar>
 										<OverflowToolbar>
